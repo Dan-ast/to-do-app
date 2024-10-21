@@ -1,0 +1,146 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f0ff; /* Light purple background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+  
+/* Main container for the task manager */
+.App {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+  
+/* Styling the task input and button */
+.task-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures the button and input are aligned vertically */
+    margin-bottom: 20px;
+}
+  
+/* Input field styling */
+input[type="text"] {
+    width: 63%; /* Adjust this based on button size */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+  
+/* Add task button styling */
+/* Add task button styling with border */
+button.add-task {
+    padding: 10px 20px;
+    background-color: #6c5ce7; /* Soft purple color */
+    color: white;
+    border: 2px solid #6c5ce7; /* Purple border to match */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    height: 40px; /* Match the height of the input */
+    display: flex;
+    align-items: center; /* Align text vertically in the center */
+    justify-content: center; /* Align text horizontally in the center */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+  
+/* Button hover effect */
+button.add-task:hover {
+    background-color: #5a4cb1; /* Slightly darker purple */
+    border-color: #5a4cb1; /* Darker border to match hover */
+    color: white; /* Keep the text white */
+}  
+  
+/* Task list styling */
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+  /* Wrapper for task text and buttons */
+.task-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1; /* Allows the content to take available space */
+} 
+
+/* Task description */
+.task span {
+    flex-grow: 1; /* Makes the text take up available space */
+    margin-right: 10px; /* Adds space between the text and icons */
+    text-align: left; /* Ensures the text is aligned to the left */
+}
+    
+.task.completed {
+    background-color: #dfe6e9; /* Completed task color */
+    text-decoration: line-through;
+}
+  
+/* Button styling inside tasks */
+.task button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #6c5ce7;
+    padding: 0; /* Remove padding */
+    margin-left: 5px; /* Minimal margin to keep them close together */
+}
+
+.task button:first-of-type {
+    margin-left: 0; /* Remove left margin from the first button */
+}
+  
+.task button:hover {
+    color: #a29bfe;
+} 
+
+/* Checkbox styling */
+.task input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and task text */
+}
+
+/* Responsive adjustments for smaller screens*/
+@media (max-width: 768px) {
+    .App {
+      max-width: 90%; /* Make the container responsive */
+    }
+  
+    .task-input-container {
+      flex-direction: column; /* Stack the input and button vertically */
+      align-items: stretch; /* Make them stretch to full width */
+    }
+  
+    input[type="text"], 
+    button.add-task {
+      width: 90%; /* Make both input and button full width */
+      margin: 5px 0 10px 0; /* Remove side margin and add bottom margin */
+    }
+  
+    button.add-task {
+      width: 100%; 
+      height: 50px; /* You can make the button a bit taller for better UX on mobile */
+    }
+}
+  
