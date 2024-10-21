@@ -121,6 +121,17 @@ button.add-task:hover {
     margin-right: 10px; /* Space between checkbox and task text */
 }
 
+/* Footer styling */
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
 /* Responsive adjustments for smaller screens*/
 @media (max-width: 768px) {
     .App {

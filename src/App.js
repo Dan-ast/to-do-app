@@ -45,6 +45,10 @@ function App() {
         </button>
       </div>
       <TaskList />
+
+      <footer className="footer">
+        &copy; {new Date().getFullYear()} <a href="https://github.com/Dan-ast/to-do-app">Anastasiia Dekret</a>. All rights reserved.
+      </footer>
     </div>
   );
 }
