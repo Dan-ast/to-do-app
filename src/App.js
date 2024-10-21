@@ -47,7 +47,7 @@ function App() {
       <TaskList />
 
       <footer className="footer">
-        &copy; {new Date().getFullYear()} <a href="https://github.com/Dan-ast/to-do-app" target='_blank'>Anastasiia Dekret</a>. All rights reserved.
+        &copy; {new Date().getFullYear()} <a href="https://github.com/Dan-ast/to-do-app" target="_blank"  rel="noopener noreferrer">Anastasiia Dekret</a>. All rights reserved.
       </footer>
     </div>
   );
