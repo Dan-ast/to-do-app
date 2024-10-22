@@ -8,6 +8,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    width: 100vw; /* Ensure the body takes the full viewpoint width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
   
 /* Main container for the task manager */
@@ -19,7 +21,8 @@ body {
     max-width: 600px;
     width: 100%;
     text-align: center;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    margin: 0 auto; /* Ensure it's horizontally centered */
 } 
 
 /* Dark Mode */
@@ -208,7 +211,8 @@ button.add-task:hover {
 /* Responsive adjustments for smaller screens*/
 @media (max-width: 768px) {
     .App {
-      max-width: 90%; /* Make the container responsive */
+      max-width: 90%; /* Make the container responsive */ 
+      margin: 0 10px; /* Add some horizontal margin to prevent touching the edges */
     }
   
     .task-input-container {
@@ -218,8 +222,8 @@ button.add-task:hover {
   
     input[type="text"], 
     button.add-task {
-      width: 90%; /* Make both input and button full width */
-      margin: 5px 0 10px 0; /* Remove side margin and add bottom margin */
+      width: 100%; /* Make both input and button full width */
+      margin: 5px 0; /* Remove side margin and add bottom margin */
     }
   
     button.add-task {
@@ -227,4 +231,3 @@ button.add-task:hover {
       height: 50px; /* You can make the button a bit taller for better UX on mobile */
     }
 }
-  
