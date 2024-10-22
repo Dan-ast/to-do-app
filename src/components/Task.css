@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     width: 100vw; /* Ensure the body takes the full viewpoint width */
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
 }
   
 /* Main container for the task manager */
@@ -22,7 +23,7 @@ body {
     width: 100%;
     text-align: center;
     box-sizing: border-box; 
-    margin: 0 auto; /* Ensure it's horizontally centered */
+    margin: 0 auto; /* Center the container horizontally */
 } 
 
 /* Dark Mode */
@@ -211,7 +212,7 @@ button.add-task:hover {
 /* Responsive adjustments for smaller screens*/
 @media (max-width: 768px) {
     .App {
-      max-width: 90%; /* Make the container responsive */ 
+      max-width: 100%; /* Make the container responsive */ 
       margin: 0 10px; /* Add some horizontal margin to prevent touching the edges */
     }
   
