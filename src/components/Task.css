@@ -20,8 +20,81 @@ body {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+} 
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #f5f5f5; /* Light text */
 }
   
+body.dark-mode .App {
+    background-color: #333;
+    color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+  
+
+body.dark-mode button.add-task {
+    background-color: #6c5ce7;
+    color: #f5f5f5;
+    border-color: #6c5ce7;
+} 
+
+body.dark-mode .task {
+    background-color: #444; /* Dark background for task field */
+    color: #f5f5f5; /* Light text for task */
+    border: 1px solid #555; /* A subtle border for better contrast */
+}
+
+/* Dark Mode Task Text Styling */
+body.dark-mode .task span {
+    color: #f5f5f5; /* Light text for the task itself */
+}
+
+body.dark-mode .task button {
+    color: #a29bfe; /* Keep icons light */
+}
+  
+body.dark-mode .task button:hover {
+    color: #f5f5f5; /* Light color on hover */
+}
+
+/* Input field dark mode styling */
+body.dark-mode input[type="text"] {
+    background-color: #444;
+    color: #f5f5f5; /* Ensure the input text is also visible */
+    border-color: #6c5ce7;
+}
+  
+body.dark-mode input[type="text"]::placeholder {
+    color: #aaa; /* Lighten the placeholder text too */
+}
+  
+body.dark-mode button.add-task:hover {
+    background-color: #5a4cb1;
+}
+
+body.dark-mode footer a {
+    color: #6c5ce7;
+}
+  
+/* Dark mode button */
+.dark-mode-toggle {
+    background-color: #6c5ce7;
+    color: white;
+    border: 2px solid #6c5ce7;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+  
+.dark-mode-toggle:hover {
+    background-color: #5a4cb1;
+}
+
+/* Light Mode */
 /* Styling the task input and button */
 .task-input-container {
     display: flex;

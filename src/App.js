@@ -4,10 +4,25 @@ import { addTask, editTask } from './redux/actions';
 import TaskList from './components/TaskList';
 
 function App() {
-  const [task, setTask] = useState('');
+  const [task, setTask] = useState(''); 
+  const [darkMode, setDarkMode] = useState(false); // State to handle dark mode
   const dispatch = useDispatch();
   const taskToEdit = useSelector((state) => state.task.taskToEdit);
-  const editTaskId = useSelector((state) => state.task.editTaskId);
+  const editTaskId = useSelector((state) => state.task.editTaskId); 
+
+  // Toggle dark mode
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  }; 
+
+  // Apply dark mode class to body
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
 
   // Populate the input field if a task is selected for editing
   useEffect(() => {
@@ -33,6 +48,9 @@ function App() {
   return (
     <div className="App">
       <h1>TO-DO APP</h1>
+      <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+        {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+      </button>
       <div className="task-input-container">
         <input
           type="text"
